@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+}
+
+.navbar{
+    width:100%;
+    height: 50px;
+    background-color: black;
+}
+.navbar-container{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: "sen", sans-serif;
+}
+
+.logo-container{
+    flex: 1;
+}
+
+.logo{
+     font-family: "sen", sans-serif;
+     font-size: 30px;
+     color: rgb(24, 228, 160)
+}
+
+.menu-container{
+    flex: 6;
+}
+
+.menu-list{
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-item{
+    margin-right: 35px;
+    
+}
+
+.menu-item.active{
+    font-weight:bold;
+}
+
+.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container{
+    margin: 0 20px
+}
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.toggle{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.left-menu-icon{
+    color: white;
+    margin-bottom: 60px;
+}
+
+.container{
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+    
+}
+
+.content-container{
+    margin-left: 50px;
+    
+}
+
+.featured-content{
+    height: 50vh;
+    padding: 35px;
+    
+} 
+
+.featured-title{
+    width: 200px;
+    margin-top: 30px; 
+}
+
+.featured-description{
+    color: white;
+    font-size: 18px;
+    font-family: "Roboto";
+    padding: 5px;
+    margin: 20px 0;
+    width: 500px;
+}
+
+.featured-button{
+    background-color: orange;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    border: 0px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+
+.movie-list-container{
+    padding: 0 20px;
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform:translateX(0);
+    transition: all 1s ease-in-out;
+    
+}
+
+.movie-list-item{
+    margin-right: 30px;
+    position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-description,
+.movie-list-item:hover .movie-list-item-button{
+    opacity: 1;
+}
+
+.movie-list-item-img{
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    border-radius: 20px;
+}
+
+.movie-list-item-title{
+     background-color: #333;
+     padding: 0 10px;
+     font-size: 32px;
+     font-weight: bold;
+     opacity: 0;
+     position: absolute;
+     top: 10%;
+     left: 50px;
+     transition: 1s all ease-in-out;
+}
+
+.movie-list-item-description{
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.arrow{
+    font-size: 80px;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    cursor: pointer;
+    opacity: .8;   
+}
+
+.container.active{
+    background-color: white;
+}
+
+.movie-list-title.active{
+    color: black;
+}
+
+.navbar-container.active{
+    color: black;
+    background-color: white;
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+}
+
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+}
+
+@media only screen and (max-width:940px){
+    .menu-container{
+        display: none;
+    }
+}
